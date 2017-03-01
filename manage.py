@@ -29,4 +29,4 @@ manager.add_command('run_tests',RunTests())
 
 
 if __name__ == '__main__':
-    mamager.run()
+    manager.run()

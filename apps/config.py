@@ -26,7 +26,8 @@ class Config(object):
         self.DEFAULT_MAIL_SENDER = 'Admin <peng.weilin@yahoo.com >'
         self.MAIL_SERVER = 'smtp.mail.yahoo.com'
         self.MAIL_PORT = 587
-        self.MAIL_USE_SSL =True
+        self.MAIL_USE_TLS = True
+        self.MAIL_USE_SSL = False
         self.MAIL_USERNAME = 'peng.weilin@yahoo.com'
         self.MAIL_PASSWORD = '57266713sweet'
 
@@ -83,6 +84,7 @@ class DevelopmentConfig(Config):
         self.ENVIRONMENT = 'Dev'
         self.DEBUG = True
         self.TESTING = False
+        self.MAIL_USE_SSL = False
 
 
 class TestingConfig(Config):

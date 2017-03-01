@@ -1,4 +1,4 @@
-from flask_security import UserMix,RoleMixin
+from flask_security import UserMixin,RoleMixin
 
 from apps.models import db,FlaskDocument
 

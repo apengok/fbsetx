@@ -15,8 +15,8 @@ app = Flask(
     )
 
 # Config
-app.config_from_object('apps.config.app_config')
-app.logger.info("Config:%s"%app.config['EVIRONMENT'])
+app.config.from_object('apps.config.app_config')
+app.logger.info("Config:%s"%app.config['ENVIRONMENT'])
 
 #Logging
 import logging

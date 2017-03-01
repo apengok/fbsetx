@@ -7,7 +7,7 @@ from apps.controllers import TemplateView
 admin = Blueprint('admin',__name__,url_prefix='/admin')
 
 
-calss AdminView(TemplateView):
+class AdminView(TemplateView):
     blueprint = admin
     route = '/'
     route_name = 'index'

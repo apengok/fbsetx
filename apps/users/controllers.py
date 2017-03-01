@@ -20,4 +20,4 @@ class ProfileView(TemplateView):
     def get_context_data(self,*args,**kwargs):
         return {
                 'content':'This is the profile page'
-            )
+            }

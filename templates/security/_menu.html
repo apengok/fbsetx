@@ -1,5 +1,5 @@
 <ul class="nav navbar-nav navbar-right">
-    {%- if current_user.is_authenticated() -%}
+    {%- if current_user.is_authenticated -%}
     <li><a href="{{ url_for('users.profile') }}">Hello {{ current_user.email }} (profile)</a></li>
     {%- endif %}
 
@@ -11,7 +11,7 @@
     <li><a href="{{ url_for('admin.admin_or_editor') }}">Admin or Editor</a></li>
     {% endif -%}
 
-        {%- if current_user.is_authenticated() -%}
+        {%- if current_user.is_authenticated -%}
             <li><a href="{{ url_for('security.logout') }}">Logout</a></li>
         {%- else -%}
             {% if security.registerable %}

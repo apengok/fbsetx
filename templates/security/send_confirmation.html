@@ -1,0 +1,16 @@
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% extends "security/index.html" %}
+
+{% block title %}Resend confirmation{% endblock %}
+
+{% block form_content %}
+    <h1>Resend confirmation</h1>
+    <form action="{{ url_for('security.send_confirmation') }}" method="POST" name="send_confirmation_form">
+        {{ send_confirmation_form.hidden_tag() }}
+        {{ wtf.form_errors(send_confirmation_form) }}
+
+        {{ wtf.form_field(send_confirmation_form.email) }}
+        {{ wtf.form_field(send_confirmation_form.submit,class_="btn",value="send again") }}
+    </form>
+{% endblock %}

@@ -13,6 +13,9 @@ Register
 
         {{ wtf.form_errors(register_user_form) }}
 
+        {{ wtf.form_field(register_user_form.username) }}
+        <img class="img-rounded profile-thumbnail" src="" >
+        {{ wtf.form_field(register_user_form.nickname) }}
         {{ wtf.form_field(register_user_form.email) }}
         {{ wtf.form_field(register_user_form.password) }}
         {% if register_user_form.password_confirm %}

@@ -81,10 +81,12 @@ app.db.init_app(app)
 
 from flask_security import Security,MongoEngineUserDatastore
 from apps.users.models import User,Role
+from apps.users.forms import ExtendedRegisterForm,ExtendedConfirmRegisterForm
 
 #Setup Flask-Security
 app.user_datastore = MongoEngineUserDatastore(app.db,User,Role)
-app.security = Security(app,app.user_datastore)
+app.security = Security(app,app.user_datastore,register_form=ExtendedRegisterForm,\
+        confirm_register_form=ExtendedConfirmRegisterForm)
 
 
 #Business Logic
